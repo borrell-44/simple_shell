@@ -21,9 +21,7 @@ int path(char *str)
 
 	if (access(arg[0], F_OK) != 0)
 	{
-		printf("arg[0]: %s\n", arg[0]);
 		arg[0] = hand_path(arg[0]);
-		printf("arg[0]: %s\n", arg[0]);
 		if (arg[0] == NULL)
 		{
 			free_arg(arg);
