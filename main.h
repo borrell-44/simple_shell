@@ -11,7 +11,6 @@
 #include <sys/types.h>
 
 int exit_shell(char *str);
-int current_env(char *str);
 int cmp(char *str, char *str1);
 char **tokens(char str[]);
 char *hand_path(char *str, char **environ);

@@ -1,6 +1,23 @@
 #include "main.h"
 
 /**
+ * _strlen - gets the lenght of a string
+ * @str: string to get the lenght from
+ *
+ * Return: lenght
+ */
+
+int _strlen(char *str)
+{
+	int i;
+
+	for (i = 0; str[i] != '\0'; i++)
+	{}
+
+	return (i);
+}
+
+/**
  * cmp - compares if str1 is equal to str
  * @str: Second string to compare
  * @str1: First string to compare
