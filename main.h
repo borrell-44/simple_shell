@@ -11,8 +11,15 @@
 #include <sys/types.h>
 
 int exit_shell(char *str);
-int path(char str[]);
-void error();
+int current_env(char *str);
+int cmp(char *str, char *str1);
+char **tokens(char str[]);
+char *hand_path(char *str);
+char *str_app(char *first, char *second);
+int _strlen(char *str);
+int path(char *str);
+void free_arg(char **arg);
+void error(void);
 
 #endif
 

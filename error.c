@@ -1,7 +1,13 @@
 #include "main.h"
 
-void error()
+/**
+ * error - prints an arror message in stderr
+ *
+ * Return: nothing
+ */
+
+void error(void)
 {
-	write(1, "./shell: No such file or directory\n", 35);
+	perror("./shell");
 }
 

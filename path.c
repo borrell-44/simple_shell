@@ -1,55 +1,36 @@
 #include "main.h"
 
-int path(char str[])
+/**
+ * path - execute commands with or without their path
+ * @str: command to be executed
+ *
+ * Return: 0 if there was an error or 1 if no errors
+ */
+
+int path(char *str)
 {
 	char **arg;
-	char *token;
-	int status, i;
-	int count = 0;
+	int status;
 	pid_t pid;
-	
-	printf("Strlen: %li\n\n", strlen(str));
 
-	/*Reserving space*/
-	for (i = 0; str[i] != '\0'; i++)
-	{
-		if (str[i] == ' ' && str[i + 1] != ' ' && str[i + 1] != '\0')
-		{
-			count++;
-		}
-
-	}
-
-	arg = malloc(sizeof(char) * (count + 1));
+	arg = tokens(str);
 	if (arg == NULL)
 	{
 		return (0);
 	}
-	
-	/*Seperate string*/
-	token = strtok(str, " \n");
-	for (i = 0; token != NULL; i++)
-	{
-		arg[i] = token;
-		token = strtok(NULL, " \n");
-	}
 
-	for (i = 0; arg[i] != NULL; i++)
-	{
-		printf("Index: %i\targ: %s\n", i, arg[i]);
-	}
-	printf("Index: %i\n\n", i);
-	arg[i] = NULL;
-
-	/*Cheking if it exists*/
 	if (access(arg[0], F_OK) != 0)
 	{
-		printf("File not found\n");
-		return (0);
+		printf("arg[0]: %s\n", arg[0]);
+		arg[0] = hand_path(arg[0]);
+		printf("arg[0]: %s\n", arg[0]);
+		if (arg[0] == NULL)
+		{
+			free_arg(arg);
+			return (0);
+		}
 	}
 
-
-	/*Execute file*/
 	pid = fork();
 	if (pid == -1)
 	{
@@ -66,6 +47,7 @@ int path(char str[])
 	{
 		wait(&status);
 	}
+
 	return (1);
 }
 
