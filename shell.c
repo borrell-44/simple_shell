@@ -6,10 +6,13 @@
  * Return: Always 0
  */
 
-int main(void)
+int main(int ac, char **av, char **env)
 {
 	char *buf = NULL;
 	size_t characters;
+
+	(void)ac;
+	(void)av;
 
 	do {
 		write(1, "$ ", 2);
@@ -18,7 +21,7 @@ int main(void)
 		if (buf[0] != '\n')
 		{
 			exit_shell(buf);
-			if (path(buf) == 0)
+			if (path(buf, env) == 0)
 			{
 				error();
 			}

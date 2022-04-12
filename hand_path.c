@@ -3,13 +3,13 @@
 /**
  * *hand_path - it handles commands without their path
  * @str: command to evaluate if it exists
+ * @environ: environment of shell
  *
  * Return: a command with its path if exists
  */
 
-char *hand_path(char *str)
+char *hand_path(char *str, char **environ)
 {
-	extern char **environ;
 	char *dirs = NULL, *dir, *token, *tmp;
 	int i;
 
