@@ -1,6 +1,6 @@
 #include "main.h"
 
-/** 
+/**
  * main - entry point
  *
  * Return: Always 0
@@ -11,8 +11,7 @@ int main(void)
 	char *buf = NULL;
 	size_t characters;
 
-	do
-	{
+	do {
 		write(1, "$ ", 2);
 		getline(&buf, &characters, stdin);
 

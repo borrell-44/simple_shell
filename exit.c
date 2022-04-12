@@ -7,9 +7,9 @@
  * Return: nothing
  */
 
- int exit_shell(char *str)
- {
- 	char *ex = "exit";
+int exit_shell(char *str)
+{
+	char *ex = "exit";
 	int i;
 
 	if (str == NULL)
@@ -28,5 +28,5 @@
 
 	exit(0);
 	return (0);
- }
+}
 
