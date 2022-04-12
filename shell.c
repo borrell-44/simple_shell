@@ -2,6 +2,9 @@
 
 /**
  * main - entry point
+ * @ac: how many arguments where given
+ * @av: list of arguments
+ * @env: enviroment of shell
  *
  * Return: Always 0
  */
