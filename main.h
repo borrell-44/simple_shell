@@ -14,10 +14,10 @@ int exit_shell(char *str);
 int current_env(char *str);
 int cmp(char *str, char *str1);
 char **tokens(char str[]);
-char *hand_path(char *str);
+char *hand_path(char *str, char **environ);
 char *str_app(char *first, char *second);
 int _strlen(char *str);
-int path(char *str);
+int path(char *str, char **env);
 void free_arg(char **arg);
 void error(void);
 

@@ -3,11 +3,12 @@
 /**
  * path - execute commands with or without their path
  * @str: command to be executed
+ * @env: enviroment of the shell
  *
  * Return: 0 if there was an error or 1 if no errors
  */
 
-int path(char *str)
+int path(char *str, char **env)
 {
 	char **arg;
 	int status;
@@ -21,9 +22,7 @@ int path(char *str)
 
 	if (access(arg[0], F_OK) != 0)
 	{
-		printf("arg[0]: %s\n", arg[0]);
-		arg[0] = hand_path(arg[0]);
-		printf("arg[0]: %s\n", arg[0]);
+		arg[0] = hand_path(arg[0], env);
 		if (arg[0] == NULL)
 		{
 			free_arg(arg);
@@ -38,7 +37,7 @@ int path(char *str)
 	}
 	if (pid == 0)
 	{
-		if (execve(arg[0], arg, NULL) == -1)
+		if (execve(arg[0], arg, env) == -1)
 		{
 			return (0);
 		}
