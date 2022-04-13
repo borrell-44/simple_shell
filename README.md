@@ -8,11 +8,11 @@ programs.
 
 ## Examples
 
-<code>$ echo "Hello"<code>
-<code>Hello<code>
-<code>$<code>
+<code>$ echo "Hello"
+Hello
+$
 
-<code>$ /bin/ls -l /tmp<code>
+$ /bin/ls -l /tmp
 total 12
 drwx------ 3 root root 4096 Apr 13 14:30 snap.lxd
 drwx------ 3 root root 4096 Apr 13 14:30 systemd-private-850550fdd9934755b3b0d71413098465-systemd-logind.service-nkVZ8g
