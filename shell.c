@@ -9,7 +9,7 @@
  * Return: Always 0
  */
 
-int main(int ac, char **env, char **env)
+int main(int ac, char **av, char **env)
 {
 	char *buf = NULL;
 	size_t characters;
