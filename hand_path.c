@@ -10,14 +10,15 @@
 
 char *hand_path(char *str, char **environ)
 {
-	char *dirs = NULL, *dir, *token, *tmp;
-	int i;
+	char *dir, *token, *tmp, *dirs;
+	int i, size;
 
 	for (i = 0; environ[i] != NULL; i++)
 	{
 		if (cmp(environ[i], "PATH"))
 		{
-			dirs = malloc(sizeof(char) * _strlen(environ[i]));
+			size = _strlen(environ[i]);
+			dirs = malloc(sizeof(char) * size + 1);
 			if (dirs == NULL)
 			{
 				return (NULL);
@@ -32,22 +33,21 @@ char *hand_path(char *str, char **environ)
 		}
 	}
 
-	if (dirs == NULL)
-	{
-		return (NULL);
-	}
-
 	token = strtok(dirs, "=");
+	token = strtok(NULL, ":");
 	for (i = 0; token != NULL; i++)
 	{
 		dir = str_app(token, str);
 		if (access(dir, F_OK) == 0)
 		{
+			free(dirs);
 			return (dir);
 		}
+		free(dir);
 		token = strtok(NULL, ":");
 	}
 
+	free(dirs);
 	return (NULL);
 }
 

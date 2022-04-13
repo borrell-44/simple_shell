@@ -15,6 +15,7 @@ int path(char *str, char **env)
 	pid_t pid;
 
 	arg = tokens(str);
+
 	if (arg == NULL)
 	{
 		return (0);
