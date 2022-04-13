@@ -26,6 +26,7 @@ int exit_shell(char *str)
 		}
 	}
 
+	free(str);
 	exit(0);
 	return (0);
 }
