@@ -50,32 +50,33 @@ int cmp(char *str, char *str1)
 
 char *str_app(char *first, char *second)
 {
-	char *str;
-	int i, j;
+	char *str = NULL;
+	int i = _strlen(first), j = _strlen(second);
 
 	if (first == NULL || second == NULL)
 	{
 		return (NULL);
 	}
 
-	str = malloc(sizeof(char) * ((_strlen(first) + _strlen(second)) - 1));
+	str = malloc(sizeof(char) * (i + j));
 	if (str == NULL)
 	{
 		return (NULL);
 	}
 
-	for (i = 0; first[i] != '\0'; i++)
+	for (i = 0; i < _strlen(first); i++)
 	{
 		str[i] = first[i];
 	}
 	str[i] = '/';
 	i++;
 
-	for (j = 0; second[j] != '\0'; j++)
+	for (j = 0; j < _strlen(second); j++)
 	{
 		str[i] = second[j];
 		i++;
 	}
+	str[i] = '\0';
 
 	return (str);
 }
