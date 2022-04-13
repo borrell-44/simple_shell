@@ -77,3 +77,7 @@ What are the three prototypes of main
     * int main(int ac, char **av)
     * int main(int ac, char **av, char **env)
 
+
+## Authors
+Yamil Avila / Alexander Borrell
+
