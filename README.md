@@ -6,6 +6,11 @@ example, if a user enters ls then the shell executes the ls command. The shell
 can also execute other programs such as applications, scripts, and user 
 programs.
 
+
+## Compilation
+>gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh
+
+
 ## Examples
 
 `$ echo "Hello"`<br>
