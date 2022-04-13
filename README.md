@@ -8,17 +8,17 @@ programs.
 
 ## Examples
 
-`$ echo "Hello"`
-`Hello`
-`$`
+`$ echo "Hello"`<br>
+`Hello`<br>
+`$`<br>
 
 
-`$ /bin/ls -l /tmp`
-`total 12`
-`drwx------ 3 root root 4096 Apr 13 14:30 snap.lxd`
-`drwx------ 3 root root 4096 Apr 13 14:30 systemd-private-850550fdd9934755b3b0d71413098465-systemd-logind.service-nkVZ8g`
-`drwx------ 3 root root 4096 Apr 13 14:30 systemd-private-850550fdd9934755b3b0d71413098465-systemd-resolved.service-tGxafj`
-`$`
+`$ /bin/ls -l /tmp`<br>
+`total 12`<br>
+`drwx------ 3 root root 4096 Apr 13 14:30 snap.lxd`<br>
+`drwx------ 3 root root 4096 Apr 13 14:30 systemd-private-850550fdd9934755b3b0d71413098465-systemd-logind.service-nkVZ8g`<br>
+`drwx------ 3 root root 4096 Apr 13 14:30 systemd-private-850550fdd9934755b3b0d71413098465-systemd-resolved.service-tGxafj`<br>
+`$`<br>
 
 ## General
 
