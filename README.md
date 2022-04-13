@@ -17,8 +17,8 @@ total 12<br>
 drwx------ 3 root root 4096 Apr 13 14:30 snap.lxd<br>
 drwx------ 3 root root 4096 Apr 13 14:30 systemd-private-850550fdd9934755b3b0d71413098465-systemd-logind.service-nkVZ8g<br>
 drwx------ 3 root root 4096 Apr 13 14:30 systemd-private-850550fdd9934755b3b0d71413098465-systemd-resolved.service-tGxafj<br>
-$<br>
-<code>
+$<br><code>
+
 ## General
 
 >Who designed and implemented the original Unix operating system
