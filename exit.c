@@ -25,8 +25,12 @@ int exit_shell(char *str)
 			return (1);
 		}
 	}
+	
+	/*if (str != NULL)
+	{
+		free(str);
+	}*/
 
-	free(str);
 	exit(0);
 	return (0);
 }

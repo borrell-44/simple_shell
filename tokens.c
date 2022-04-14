@@ -26,14 +26,19 @@ char **tokens(char str[])
 	{
 		return (NULL);
 	}
-
+	
 	token = strtok(str, " \n");
 	for (i = 0; token != NULL; i++)
 	{
+		size = _strlen(token);
+		token[size] = '\0';
+
 		tokens[i] = token;
 		token = strtok(NULL, " \n\"");
 	}
 	tokens[i] = NULL;
+
+	free(token);
 
 	return (tokens);
 }

@@ -18,7 +18,7 @@ char *hand_path(char *str, char **environ)
 		if (cmp(environ[i], "PATH"))
 		{
 			size = _strlen(environ[i]);
-			dirs = malloc(sizeof(char) * size + 1);
+			dirs = malloc(sizeof(char) * (size + 1));
 			if (dirs == NULL)
 			{
 				return (NULL);
