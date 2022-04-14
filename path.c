@@ -30,7 +30,7 @@ int path(char *str, char **env)
 			return (0);
 		}
 	}
-
+	
 	pid = fork();
 	if (pid == -1)
 	{
@@ -40,6 +40,7 @@ int path(char *str, char **env)
 	{
 		if (execve(arg[0], arg, env) == -1)
 		{
+			free_arg(arg);
 			return (0);
 		}
 	}

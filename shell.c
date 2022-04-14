@@ -18,8 +18,10 @@ int main(int ac, char **av, char **env)
 	(void)av;
 
 	do {
-		write(1, "$ ", 2);
-		getline(&buf, &characters, stdin);
+		if (isatty(0))
+			write(1, "$ ", 2);
+		if ((getline(&buf, &characters, stdin) == -1))
+			break;
 
 		if (buf[0] != '\n')
 		{
